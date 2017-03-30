@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>hw3</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBGef1KnpB7bsFDD7OzjUo-m86RJzIKNrQ",
+    authDomain: "test-a232d.firebaseapp.com",
+    databaseURL: "https://test-a232d.firebaseio.com",
+    storageBucket: "test-a232d.appspot.com",
+    messagingSenderId: "105411980620"
+  };
+  firebase.initializeApp(config);
+</script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  </head><body>
+    <div class="container">
+      <div class="row">
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="increaseFontSize()">Large</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="MediumFontSize()">Medium</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="decreaseFontSize()">Small</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="btn-group btn-group-justified">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="anony()">匿名登入</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="googleSignin()">Google登入</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default" onclick="signout()">登出</button>
+          </div>
+        </div>
+      </div> 
+      <p>目前登入身份: <span id="sign_up">尚未登入</span></p>
+      <div class="row">
+        <div class="header">
+          <h1 style="font-size:40px">失衡的期刊出版市場：學界力抗出版巨商的奮鬥史</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="section1" onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <h2 style="font-size:35px">鄭婷宇</h2>
+          <h3 style="font-size:30px">2016-12-30</h3>
+          <a href="http://creativecommons.tw/blog/20161230" target="_blank">http://creativecommons.tw/blog/20161230</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 section2 " onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <h2 style="font-size:35px">六大廠商出版過半期刊，文獻出版日益集中化</h2>
+          <div class="text">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;世界上第一本科學期刊誕生於1665年，分別是法國的Journal des
+              Sçavans（智者雜誌）和英國皇家學會出版的Philosophical Transactions of the Royal Society（皇家學會哲學會刊）。在期刊系統出現以前，學者們大多藉由私人信件的往返、各式會議及專書中討論彼此的研究，訊息傳播的範圍與效率都受限。科學期刊的創立，幫助科學家擴大資訊接收的範圍，並得以定期交流研究成果，同行評審的原則也由此奠定。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;從期刊問世到第二次世界大戰之前，雖然商業出版的期刊比例不低，傳播效率也較高，但大多數的出版業務仍由各學會負責。不過，1990年代中期的資料顯示，出版界的情勢出現了逆轉—商業出版的比例佔期刊總數的40%、學術與專業學會出版比例佔25%、大學與教育出版佔16%。在1994-1998年間出版的論文當中，出自Elsevier的比例就已高達20%。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Larivière的研究分析了於1973-2013年出版的4千500萬份的科學論文，證明了在自然暨醫學科學與社會科學暨人文學等領域，發現文獻出版集中於六大出版商的現象日益顯著。這六大出版商分別為
+              <span>Reed-Elsevier、Wiley-Blackwell、Springer、Taylor &amp; Francis、The American
+                Chemical Society</span>以及
+              <span>Sage</span>，其中前四家身兼兩大領域的龍頭，Sage僅在社會科學暨人文學中躋身前五大出版商，The American Chemical
+              Society亦僅在自然暨醫學科學佔有前五大之一的地位，並且是上述出版社中唯一的學術學會，其餘五家全都是商業出版商。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;數位科技的應用，非但沒有使得知識的傳播更加普及與自由，反而讓大型的商業出版集團獲利更多。在自然暨醫學科學領域，1973年之前，前五大只佔該領域約20%的論文出版比例，到了2013年激增到53%，其中Reed-Elsevier、
+              Springer和 Wiley-Blackwell三家就囊括了47%的比例，足見出版比例分配的不均。社會科學暨人文學領域，1973至1990年間，前五大商業出版商所出版的論文比例佔該領域不到10%，卻在2013年時飆升至51%。換句話說，在這兩個領域做研究的學者在查詢資料時，大概每兩篇文獻，就會有一篇名列於這六大家出版商的資料庫之中（圖1）。</p>
+            <img src="https://firebasestorage.googleapis.com/v0/b/test-a232d.appspot.com/o/public%2Ffirst.png?alt=media&token=3a55f162-2501-4a84-9200-4ae29f1d68d5" title="圖1 2013年前五大學術出版社在兩領域的期刊出版比例" alt="圖1 2013年前五大學術出版社在兩領域的期刊出版比例" width="500">
+              <p class="picture_word">圖1
+                <strong>2013年前五大學術出版社在兩領域的期刊出版比例</strong>
+                <br>資料：The Oligopoly of Academic Publishers in the Digital Era / Vincent Larivière
+                <br>製圖：鄭婷宇</p>
+          </div>
+        </div>
+        <div class="col-md-4 section2" onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <a href="http://creativecommons.tw/blog/20161207"><em>Advertising</em></a>
+          <h3 style="font-size:30px">你的網路有多快？ - MLab 把他們的調查分析都
+            <span>Open Data</span>了！</h3>
+          <h4 style="font-size:25px">林誠夏／編譯</h4>
+          <div class="text">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open Data(開放資料)並不僅僅是政府的事！雖然近年在這個領域最常被討論的是政府資料開放、或稱開放政府資料
+              (Open Government Data)，事實上開放政府這個概念於 1950 年美國境內關於「資訊自由法 (Freedom of Information
+              Act, FOIA）的辯論已經出現，只是在近代的浪潮裡被注入數位與網路提供的新元素。而近年在討論到 Open Data 時，初期多討論的是如何促進政府機關構以更開放的立場、態度，及格式來提供資料，那是因為大量資料被屯儲於公務單位裡，若能就此寶庫先行取得一些成果，對整體開放資料的發展能帶來很大的效益，然而，學術領域與商用領域也必須隨後跟進，如此
+              Open Data 才能在長期發展下，形成一個豐富應用的生態系 (ecosystem)，Measurement Lab 這個具有學術研究並商業發展雙重面向的單位，已率先將其調查分析所得的相關資料，自行採
+              CC0 - 公眾領域貢獻宣告的方式，Open Data 出來給不特定多數人皆可不受限制利用，非常具有長期觀察的價值！</p>
+            <a href="https://www.youtube.com/watch?v=RnIVMfBP4So&amp;feature=youtu.be" target="_blank">
+          <img src="https://firebasestorage.googleapis.com/v0/b/test-a232d.appspot.com/o/public%2Fadvertise.png?alt=media&token=1e35ea21-4a35-410a-9f11-590c46c59abf" width="280" alt="Introduction to Measurement Lab" title="Introduction to Measurement Lab">
+        </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="section2 col-md-8" onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <h2 style="font-size:35px">高昂文章處理費與訂閱費，逼研究者起身抗議</h2>
+          <div class="text">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;呈現寡占狀態的學術出版市場，衍生出文獻集中化的現象，加上不合理的商業模式，使各大圖書館漸漸無力負擔出版商不斷提高的訂閱費用。早期，當學者想出版研究成果時，只能無償交付出版商，後續學者本身因不再擁有著作權利，以致不得自行散播著作、與同業交流，除非圖書館付出大筆費用買回期刊，納稅資助國家研究的公民也無法閱讀這些最新的知識。有感於期刊出版商以販賣他人研究成果獲取利潤的商業模式，對研究者、圖書館與納稅民眾都不公平，開放近用的新型商業模式在一連串摸索中逐漸成形（詳情可
+              <a href="http://creativecommons.tw/blog/20161204" target="_blank">參考</a>）。在開放近用的出版形式中，期刊出版商轉而向學者或其所屬的機構索取文章處理費，刊出後的論文將可免費釋出給所有人取用。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在混合型期刊(Hybrid journals)中，資料庫的取得須透過訂購，但支持文章以開放近用的方式投稿，此部分便會向作者所屬機構索取文章處理費，以「彌補」該文提供給任何人免費取用所減損的經濟收益。期刊Lingua的前主編Johan
+              Rooryck，批評混合型期刊是「雙重收費」，不僅向作者索取高達每篇1800美元的文章處理費，期刊的訂購也要價不菲。即使Lingua所屬的Elsevier表示已收取文章處理費的文章是免費開放，但許多研究者仍對於期刊訂立的高昂文章處理費與訂購費感到不滿，認為自己無償勞動所產出的學術貢獻，成為出版商獲取高額利潤的來源。畢竟Elsevier、Springer和Taylor&amp;
+              Francis等幾家大型出版商的獲利率皆高達35%，這可是比Facebook獲利率27%還驚人的利潤。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期刊大盤商索取的高昂費用，對學術成果的流通與近用性皆造成傷害。研究者的怨念在2015年爆發開來，要求Elsevier降低文章處理費、讓作者保留其著作權等。在Elsevier拒絕後，Lingua的六位編輯與31位編輯委員集體辭職以示抗議。這群編輯另創一個新的開放近用期刊—Glossa，只向作者收400美元的文章處理費，並取消對無資金之投稿者的收費。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;認知科學的社群則在2016年接續了這場對Elsevier的抗議運動。一群研究者向Elsevier請願，要求降低Elsevier在該領域的權威期刊--Cognition的文章處理費。由David
+              Barner發起的聯署請願，在一週內就集結了超過1200位附議，其中包括至少十位Cognition的編輯委員會成員。截至目前為止，該網站共收集了1661位科學家的連署。</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="section2 col-md-8" onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <h2 style="font-size:35px">期刊訂閱費用節節高升，大學圖書館紛紛抵制</h2>
+          <div class="text">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在期刊與出版商彼此合併或兼併之後，學術出版市場被少數幾家廠商寡占的情形，使圖書館更無議價的空間。根據美國研究圖書館(Association
+              of Research Libraries)之統計，自1986年至2012年以來，期刊價格已上漲456%，約為同期間消費者物價指數(CPI)上漲幅度的四倍，期刊價格居高不下，穩坐圖書館開支最高的寶座多年。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面對不斷上漲的資料庫訂閱費用，各國學術機構的採購經費日漸捉襟見肘。2012年，英國劍橋大學數學家Timothy
+              Gowers在其部落格發表一篇「知識的代價」(The Cost of Knowledge)的文章，呼籲學界共同抵制Elsevier剝削研究者與社會的商業模式，加入拒絕向Elsevier擁有之期刊投稿、協助審閱或編輯的行列，目前已累計有16,484人響應。以Gowers的文章為序幕，一場向Elsevier抗議的「學術之春」(Academic
+              Spring)開始在世界各地的學術機構蔓延而起。加州、哈佛等名校先後譴責Elsevier資料庫售價高額的漲幅，停止訂閱。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;儘管Gowers的登高一呼獲得熱烈迴響，但這場杯葛似乎缺乏後續的威力與參與動能。根據Tom
+              Heyman等人於2016年追蹤化學、心理領域約500名參與聯署的科學家後續動向的研究指出，有23%簽名的科學家仍在Elsevier發表論文(圖2)。對科學家來說，要遵守「不發表」的承諾所必須付出的代價不小，面對學術工作環境崇尚的高影響力指標，科學家常有投稿主流且高影響力期刊的壓力與誘惑。</p>
+          </div>
+          <div>
+            <img src="https://firebasestorage.googleapis.com/v0/b/test-a232d.appspot.com/o/public%2Fsecond.png?alt=media&token=a2481192-5a84-46c9-8458-362fb61a1189" alt="圖2 抵制Elsevier承諾跳票的科學家" width="500" title="圖2 抵制Elsevier承諾跳票的科學家">
+            <p class="picture_word">圖2
+              <strong>抵制Elsevier承諾跳票的科學家</strong>
+              <br>資料：On the Cost of Knowledge: Evaluating the Boycott against Elsevier /Tom
+              Heyman, Pieter Moors, Gert Storms.
+              <br>製圖：鄭婷宇</p>
+          </div>
+          <div class="text">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;荷蘭是Elsevier的發源與總部所在地，當地的學術圈同樣對沉重的訂購費用感到不滿。2015年，荷蘭教科文部次長Sander
+              Dekker出面與Elsevier談判，加上14所公立研究型大學聯合發動杯葛計畫，威脅集體辭去於Elsevier編輯等職務，甚至投稿。這場由政府帶頭、學界團結對抗壟斷的學術出版集團的運動，在Elsevier的妥協下落幕。雖然荷蘭學界提出的條件被打了些折扣，但仍成功爭取到更好的開放近用條件。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;為了抗議Elsevier不透明的商業模式，德國DEAL Project計畫共有多達60所大學及研究機構共同抵制Elsevier，全面停訂Elsevier期刊的決定將自2017年1月起生效。</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="section2 col-md-8" onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <table class="TB_COLLAPSE">
+            <caption>參考資料</caption>
+            <thead>
+              <tr>
+                <th>網頁名稱</th>
+                <th>網頁網址</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>科研論文是怎樣發表的：同行評審的是非與未來</td>
+                <td>https://kknews.cc/science/2a6rbkg.html</td>
+              </tr>
+              <tr>
+                <td>被美國關停的學術論文免費下載網站Sci-Hub復活了</td>
+                <td>https://theinitium.com/article/20160225-dailynews-sci-hub/</td>
+              </tr>
+              <tr>
+                <td>聯合抵制Elsevier，科學家們出爾反爾</td>
+                <td>https://read01.com/EA6M54.html</td>
+              </tr>
+              <tr>
+                <td>Editors of the Journal Lingua Protest-Quit in Battle for Open Access</td>
+                <td>https://www.wired.com/2015/11/editors-of-the-journal-lingua-protest-quit-in-battle-for-open-access/</td>
+              </tr>
+              <tr>
+                <td>Support Fair Open Access at Cognition</td>
+                <td>http://petitions.moveon.org/sign/support-fair-open-access</td>
+              </tr>
+              <tr>
+                <td>推倒貪婪期刊付費高牆！學術界揭竿而起</td>
+                <td>https://www.twreporter.org/a/elsevier-vs-sci-hub</td>
+              </tr>
+              <tr>
+                <td>學術出版的五大巨頭－寡頭壟斷的省思</td>
+                <td>http://twmedia.org/archives/1242</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <div class="row">
+          <div class="section2 col-md-8">
+            <h2>留言給我</h2>
+            <h3>名稱</h3>
+            <textarea rows="4" cols="80" id="name">你還沒登入喔～</textarea>
+            <h3>留言內容</h3>
+            <textarea rows="4" cols="80" id ="opinion"></textarea>
+            
+
+            
+            <p id="reply"></p>
+            <button type="button" onclick="upLoadFunction()">上傳</button>
+          </div>
+
+        </div>
+      
+      <div class="row">
+        <div class="footer" onmouseover="moveInFunction(this)" onmouseout="moveOutFunction(this)">
+          <h2 style="font-size:35px">延伸閱讀</h2>
+          <ul>
+            <li>
+              <a href="http://creativecommons.tw/blog/20161204" target="_blank">打破學術界的高牆—開放近用期刊的發展史</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <button class="btn btn-primary btn-lg center-block" type="button" onclick="window.scrollTo(100,0)">返回頂端</button>
+      </div>
+      <script type="text/javascript">
+        
+        var storageRef = firebase.storage().ref();
+        var now = new Date();
+        function upLoadFunction() {
+          var name = document.getElementById("name").value;
+          var op = document.getElementById("opinion").value;
+          
+          var afuRef = storageRef.child("message/secret-message-"+now.getTime()+".txt");
+          afuRef.putString("作者："+name+"\n內容："+op+"\n").then(function(snapshot) {
+          console.log("成功上傳純⽂文字檔案");
+          console.log(now.getTime());
+        });
+          document.getElementById("reply").innerHTML = "謝謝你的意見～";
+          
+          document.getElementById("opinion").value = "";
+          
+        } 
+
+        function anony(){
+          firebase.auth().signInAnonymously().catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+          });
+          document.getElementById("sign_up").innerHTML="匿名登入";
+          console.log("匿名登入")
+
+          firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              var isAnonymous = user.isAnonymous;
+              var uid = user.uid;
+              document.getElementById("name").value = uid;
+              // ...
+            } else {
+              // User is signed out.
+              // ...
+            }
+  // ...
+          });
+
+        }
+
+       
+        var provider = new firebase.auth.GoogleAuthProvider();
+        function googleSignin() {
+          firebase.auth().signInWithPopup(provider).then(function(result) {
+            var token = result.credential.accessToken;
+            var user = result.user;      
+            console.log(token)
+            console.log(user)
+            document.getElementById("sign_up").innerHTML=user.displayName;
+            document.getElementById("name").value = user.displayName;
+          }).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;    
+            console.log(error.code)
+            console.log(error.message)
+          });
+        }
+
+        function signout() {
+          firebase.auth().signOut().then(function() {
+            console.log('Signout Succesfull')
+            document.getElementById("sign_up").innerHTML="尚未登入";
+            document.getElementById("name").value ="你還沒登入喔～";
+          }, function(error) {
+            console.log('Signout Failed')  
+          });
+        }
+        
+
+        function moveInFunction(x){
+                                  x.style.backgroundColor = "#D4D4D4";
+                                }
+                                 function moveOutFunction(x){
+                                  x.style.backgroundColor = "white";
+                                }
+      
+      
+        function increaseFontSize() {
+          var hFirst  = document.getElementsByTagName('h1')[0];
+          var hSecond  = document.getElementsByTagName('h2');
+          var hThird = document.getElementsByTagName('h3');
+          var hFourth = document.getElementsByTagName('h4');
+          var pArray = document.getElementsByTagName('p');
+          var aArray = document.getElementsByTagName('a');
+          var spanArray = document.getElementsByTagName('span');
+          var c =document.getElementsByTagName('caption')[0];
+          var tableD = document.getElementsByTagName('td');
+          var tableHead = document.getElementsByTagName('th');
+          hFirst.style.fontSize = "50px";
+          c.style.fontSize = "34px";
+          for(i=0;i<pArray.length;i++)
+            pArray[i].style.fontSize="30px";
+          for(i=0;i<tableD.length;i++)
+            tableD[i].style.fontSize="25px";
+          for(i=0;i<tableHead.length;i++)
+            tableHead[i].style.fontSize="28px";
+          for(i=0;i<hSecond.length;i++)
+            hSecond[i].style.fontSize="45px";
+          for(i=0;i<hThird.length;i++)
+            hThird[i].style.fontSize="40px";
+          for(i=0;i<hFourth.length;i++)
+            hFourth[i].style.fontSize="35px";
+          for(i=0;i<aArray.length;i++)
+            aArray[i].style.fontSize="40px";
+          for(i=0;i<spanArray.length;i++)
+            spanArray[i].style.fontSize="35px";
+        }
+        function decreaseFontSize() {
+          var hFirst  = document.getElementsByTagName('h1')[0];
+          var hSecond  = document.getElementsByTagName('h2');
+          var hThird = document.getElementsByTagName('h3');
+          var hFourth = document.getElementsByTagName('h4');
+          var pArray = document.getElementsByTagName('p');
+          var aArray = document.getElementsByTagName('a');
+          var spanArray = document.getElementsByTagName('span');
+          var c =document.getElementsByTagName('caption')[0];
+          var tableD = document.getElementsByTagName('td');
+          var tableHead = document.getElementsByTagName('th');
+           c.style.fontSize = "14px";
+          hFirst.style.fontSize = "30px";
+          for(i=0;i<pArray.length;i++)
+            pArray[i].style.fontSize="10px";
+          for(i=0;i<tableD.length;i++)
+            tableD[i].style.fontSize="10px";
+           for(i=0;i<tableHead.length;i++)
+            tableHead[i].style.fontSize="13px";
+          for(i=0;i<hSecond.length;i++)
+            hSecond[i].style.fontSize="25px";
+          for(i=0;i<hThird.length;i++)
+            hThird[i].style.fontSize="20px";
+          for(i=0;i<hFourth.length;i++)
+            hFourth[i].style.fontSize="15px";
+          for(i=0;i<aArray.length;i++)
+            aArray[i].style.fontSize="20px";
+          for(i=0;i<spanArray.length;i++)
+            spanArray[i].style.fontSize="15px";
+        }
+        function MediumFontSize(){
+         var hFirst  = document.getElementsByTagName('h1')[0];
+          var hSecond  = document.getElementsByTagName('h2');
+          var hThird = document.getElementsByTagName('h3');
+          var hFourth = document.getElementsByTagName('h4');
+          var pArray = document.getElementsByTagName('p');
+          var aArray = document.getElementsByTagName('a');
+          var spanArray = document.getElementsByTagName('span');
+          var c =document.getElementsByTagName('caption')[0];
+          var tableD = document.getElementsByTagName('td');
+          var tableHead = document.getElementsByTagName('th');
+          hFirst.style.fontSize = "40px";
+          c.style.fontSize = "24px";
+          for(i=0;i<pArray.length;i++)
+            pArray[i].style.fontSize="20px";
+          for(i=0;i<tableD.length;i++)
+            tableD[i].style.fontSize="15px";
+          for(i=0;i<tableHead.length;i++)
+            tableHead[i].style.fontSize="18px";
+          for(i=0;i<hSecond.length;i++)
+            hSecond[i].style.fontSize="35px";
+          for(i=0;i<hThird.length;i++)
+            hThird[i].style.fontSize="30px";
+          for(i=0;i<hFourth.length;i++)
+            hFourth[i].style.fontSize="25px";
+          for(i=0;i<aArray.length;i++)
+            aArray[i].style.fontSize="30px";
+          for(i=0;i<spanArray.length;i++)
+            spanArray[i].style.fontSize="25px";
+        }
+      </script>
+    </div>
+  
+
+</body></html>
