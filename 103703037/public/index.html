@@ -221,6 +221,7 @@
         var storageRef = firebase.storage().ref();
         var now = new Date();
         function upLoadFunction() {
+          if (document.getElementById("sign_up").innerHTML!="尚未登入"){
           var name = document.getElementById("name").value;
           var op = document.getElementById("opinion").value;
           
@@ -232,7 +233,10 @@
           document.getElementById("reply").innerHTML = "謝謝你的意見～";
           
           document.getElementById("opinion").value = "";
-          
+          }
+          else{
+            document.getElementById("reply").innerHTML = "你還沒登入！！";
+          }
         } 
 
         function anony(){
@@ -250,7 +254,7 @@
               // User is signed in.
               var isAnonymous = user.isAnonymous;
               var uid = user.uid;
-              document.getElementById("name").value = uid;
+              document.getElementById("name").value = "匿名";
               // ...
             } else {
               // User is signed out.
